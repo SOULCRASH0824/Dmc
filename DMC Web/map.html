@@ -1,0 +1,303 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <!--image gallery-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- References: https://github.com/fancyapps/fancyBox -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<style>
+body {margin: 0;
+background-color: #000000;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #9b040e;}
+
+ul.topnav li a.active {background-color: #9b040e;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+.drift_image{
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.container {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+img { 
+    width: 20%;
+    height: auto;
+	height: 20%;
+	position: static;
+	display:inline;
+    border: 3px solid #A70606;
+}
+.box {
+  float: center;
+  width: 100%;
+  height: 100%;	
+  margin: 2em;
+}
+.after-box {
+  clear: center;
+}
+.icon{
+width:25%;
+height:60%;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: black;
+    padding: 10px;
+}
+h1{
+	font-size:30px
+	font:center;
+	color:red;
+	text-align: center;
+}
+
+hr{
+ border : 0;
+  height: 1px; 
+  background-image: linear-gradient(to right, rgba(255,0,0), rgba(0, 0, 0, 0.75), rgba( 255, 0, 0));
+}
+figcaption{
+color:white;
+}
+
+.fig1{
+	 border-radius: 50%;
+	display:inline;
+}
+
+div.gallery {
+    margin: 9em;
+    border: 1px solid #A70606;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #A70606;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+	color:red;
+}
+.tit{
+	font-size:200%;
+	text-align:center;
+	color:red;
+}
+
+iframe {
+    display: block;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: 0;
+}
+</style>
+		
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+  <li><a  href="home.html">Home</a></li>
+  <li><a href="events.html">Events</a></li>
+  <li><a  href="#contact">Members</a></li>
+  <li><a class="active" href="map.html">Destinations</a></li>
+   <li><a href="#contact">Gallery</a></li>
+   
+    <li class="right"><a  href="#contact">Contact</a></li>
+  <li class="right"><a href="#about">About</a></li>
+  
+</ul>
+<br>
+</br>
+<p class="tit">
+DESTINATIONS
+</p>
+<br>
+</br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125260.5758408967!2d122.61497174827464!3d11.15851045568133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33af146608ed1971%3A0x721c9692828265d4!2sPassi+City%2C+Iloilo!5e0!3m2!1sen!2sph!4v1532622996804" align="middle"></iframe>
+<p class="tit">
+Passi City,Iloilo
+</p>
+<br>
+</br>
+
+<br>
+</br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d267227.0546560564!2d122.57927908402897!3d11.281902703272369!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x33af54c4c0ec5eeb%3A0x678aac9d0dd0a5e!2sIloilo+East+Coast+-+Capiz+Rd!3m2!1d11.4238515!2d122.91666029999999!4m5!1s0x33af146608ed1971%3A0x721c9692828265d4!2sPassi+City%2C+Iloilo!3m2!1d11.1687967!2d122.650351!5e0!3m2!1sen!2sph!4v1532623981019" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<p class="tit">
+Bingawan,Iloilo
+</p>
+<br>
+</br>
+
+
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- meta data & title -->
+        <meta charset="utf-8">
+        <title>CPU Uday</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <!--image gallery-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- References: https://github.com/fancyapps/fancyBox -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+    <style type="text/css">
+
+        .gallery
+
+        {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+        }
+
+        .form-image-upload{
+
+            background: #e8e8e8 none repeat scroll 0 0;
+
+            padding: 15px;
+
+        }
+
+        #imgID{
+            height: 180px;
+            width: 180px;
+            border: 1px black solid;
+        }
+
+        #imgIDNF{
+            height: 180px;
+            width: 100%;
+            border: 1px black solid;
+        }
+
+        #myTable {
+            border-collapse: collapse; /* Collapse borders */
+            width: 100%; /* Full-width */
+            border: 1px solid #ddd; /* Add a grey border */
+            font-size: 18px; /* Increase font-size */
+        }
+
+        #myTable th, #myTable td {
+            text-align: left; /* Left-align text */
+            padding: 12px; /* Add padding */
+        }
+
+        #myTable tr {
+            /* Add a bottom border to all table rows */
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+            /* Add a grey background color to the table header and on hover */
+            background-color: #f1f1f1;
+        }
+    </style>
+    </head>
+  <body>
+
+    <!-- Header -->
+        
+    <nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
+        <div class="container">
+        
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand wow fadeInDownBig" href="index.php"><img class="office-logo" src="img/CPU-R.png" alt="Office"></a>      
+            </div>
+        
+            <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active">
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.php">About</a>
+                    </li>
+                  <!--<li>
+                        <a href="blog.php">Blog</a>
+                    </li>-->
+                    <li>
+                        <a href="team.php">Team</a>
+                    </li>
+                    <li>
+                        <a href="contact.php"><span>Contact</span></a>
+                    </li>
+                    <li>
+                        <a href="login.php"><span>Login</span></a>
+                    </li>
+                </ul>         
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Header -->
+
+
+    <!-- Begin #carousel-section -->
+    <section id="carousel-section" class="section-global-wrapper"> 
+        <div class="container-fluid-kamn">
+            <div class="row">
+                <div id="carousel-1" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators visible-lg">
+                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                    </ol>
+        
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <!-- Begin Slide 1 -->
+                        <div class="item active">
+                            <img src="assets/img/slider/V1.jpg" height="400" alt="Image of first carousel">
+                            <div class="carousel-caption">
+                                <!--<h3 class="carousel-title hidden-xs">Office BOOTSTRAP TEMPLATE</h3>
+                                <p class="carousel-body">RESPONSIVE \ MULTI PAGE</p>-->
+                            </div>
+                        </div>
+                        <!-- End Slide 1 -->
+
+                        <!-- Begin Slide 2 -->
+                        <div class="item">
+                            <img src="assets/img/slider/V2.jpg" height="400" alt="Image of second carousel">
+                            <div class="carousel-caption">
+                                <!--<h3 class="carousel-title hidden-xs">EASY TO CUSTOMIZE</h3>
+                                <p class="carousel-body">BEAUTIFUL \ CLEAN \ MINIMAL</p>-->
+                            </div>
+                        </div>
+                        <!-- End Slide 2 -->
+
+                        <!-- Begin Slide 3 -->
+                        <div class="item">
+                            <img src="assets/img/slider/V3.jpg" height="400" alt="Image of third carousel">
+                            <div class="carousel-caption">
+                               <!-- <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
+                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>-->
+                            </div>
+                        </div>
+                        <!-- End Slide 3 -->
+                          <!-- Begin Slide 3 -->
+                        <div class="item">
+                            <img src="assets/img/slider/V4.jpg" height="400" alt="Image of third carousel">
+                            <div class="carousel-caption">
+                               <!-- <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
+                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>-->
+                            </div>
+                        </div>
+                        <!-- End Slide 3 -->
+                          <!-- Begin Slide 3 -->
+                        <div class="item">
+                            <img src="assets/img/slider/V5.jpg" height="400" alt="Image of third carousel">
+                            <div class="carousel-caption">
+                               <!-- <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
+                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>-->
+                            </div>
+                        </div>
+                        <!-- End Slide 3 -->
+                          <!-- Begin Slide 3 -->
+                        <div class="item">
+                            <img src="assets/img/slider/V6.jpg" height="400" alt="Image of third carousel">
+                            <div class="carousel-caption">
+                               <!-- <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
+                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>-->
+                            </div>
+                        </div>
+                        <!-- End Slide 3 -->
+                          <!-- Begin Slide 3 -->
+                        <div class="item">
+                            <img src="assets/img/slider/V7.jpg" height="400" alt="Image of third carousel">
+                            <div class="carousel-caption">
+                               <!-- <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
+                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>-->
+                            </div>
+                        </div>
+                        <!-- End Slide 3 -->
+                    </div>
+        
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-1" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-1" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End #carousel-section -->
+
+
+    <!-- Begin #services-section -->
+    <section id="services" class="services-section section-global-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="services-header">
+                    <h3 class="services-header-title">Universtiy Events</h3>
+                    <p class="services-header-body"><em> Central Philippine University </em>  </p><hr>
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!-- End #services-section -->
+
+
+
+    <!--Portfolio
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('category1')"> Category 1</button>
+      <button class="btn" onclick="filterSelection('category2')"> Category 2</button>
+      <button class="btn" onclick="filterSelection('category3')"> Category 3</button>
+    </div>-->
+
+
+
+    <div class="container">
+
+    <div class="row">
+
+    <div class='list-group gallery'>
+
+
+            <?php
+
+            require('db_config.php');
+
+            $id = "";
+            $sql = "SELECT * FROM tblevent WHERE eventStatus = '1' ORDER BY eventType";
+
+            $images = $mysqli->query($sql);
+
+
+            while($image = $images->fetch_assoc()){
+                //$_SESSION['getID'] = $image['eventID'];
+                $id = $image['eventID']
+
+            ?>
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+
+                   <!-- <a class="thumbnail fancybox" rel="ligthbox" href="uploads/<?php echo $image['eventImage'] ?>">
+
+                        original
+                        <img class="img-responsive" id="imgID" alt=""  src="uploads/<?php echo $image['eventImage'] ?>" />-->
+
+                        <!--my code-->
+
+                        <a href="eventDetails.php?id=<?php echo $id ?>">
+                            <img class="img-responsive" id="imgID" alt=""  src="uploads/<?php echo $image['eventImage'] ?>" />
+                        </a>
+                        <div class='text-center' style="margin-bottom: 10px; margin-top: 5px">
+                            <small class='text-muted'><?php echo $image['eventName'] ?></small>
+                        </div> 
+
+                       <!-- <a href="eventDetails.php?id=<?php echo $id ?>">
+                            <img class="img-responsive" id="imgID" alt=""  src="category1/<?php echo $image['eventImage'] ?>" />
+                        </a>
+                        <div class='text-center' style="margin-bottom: 10px; margin-top: 5px">
+                            <small class='text-muted'><?php echo $image['eventName'] ?></small>
+                        </div>
+
+                        <a href="eventDetails.php?id=<?php echo $id ?>">
+                            <img class="img-responsive" id="imgID" alt=""  src="category2/<?php echo $image['eventImage'] ?>" />
+                        </a>
+                        <div class='text-center' style="margin-bottom: 10px; margin-top: 5px">
+                            <small class='text-muted'><?php echo $image['eventName'] ?></small>
+                        </div> 
+
+                        <a href="eventDetails.php?id=<?php echo $id ?>">
+                            <img class="img-responsive" id="imgID" alt=""  src="category3/<?php echo $image['eventImage'] ?>" />
+                        </a>
+                        <div class='text-center' style="margin-bottom: 10px; margin-top: 5px">
+                            <small class='text-muted'><?php echo $image['eventName'] ?></small>
+                        </div>  -->
+
+                    <!--<</a>
+
+                    form action="imageDelete.php" method="POST">-->
+
+                    <input type="hidden" name="id" value="<?php echo $image['eventID'] ?>">
+
+                  
+
+                    </form>
+
+                </div> <!-- col-6 / end -->
+
+            <?php } ?>
+
+
+         </div> <!-- list-group / end -->
+
+        </div> <!-- row / end -->
+
+    </div> <!-- container / end -->
+
+
+    <hr/>
+
+
+    
+      <!-- Begin #services-section  Universtiy Day Guidelines-->
+    <section id="services" class="services-section section-global-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="services-header">
+                    <h3 class="services-header-title">Universtiy Day Guidelines</h3>
+                </div>
+
+                 <?php
+
+                    $sql="SELECT * FROM tblguidelines WHERE guideStatus = '1'";
+                    $result = $mysqli->query($sql);
+                    echo '<table id="myTable" border="1" width="100%" >
+                    <tr class="header">
+                    <th>About</hd>
+                    <th>PDF</hd>
+                    </tr>';
+                    while($row = $result->fetch_assoc()) { 
+                        $files_field= $row['guideImage'];
+                        $files_show= "guidelines/$files_field";
+                        echo "<tr>";
+                        echo "<td>" . $row['guideName'] . "</td>";
+                        echo "<td><a href='$files_show'>$files_field<a/></td>";
+                        echo "</tr>"; 
+                    }
+                    echo '</table>';
+            
+                ?>
+            </div>
+        </div>      
+    </section>
+    <!-- End #services-section -->
+
+
+
+    <hr/>
+
+
+    
+      <!-- Begin #services-section Universtiy Day News Feed-->
+    <section id="services" class="services-section section-global-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="services-header">
+                    <h3 class="services-header-title">Universtiy Day News Feed</h3>
+                </div>
+            </div>
+        </div>      
+    </section>
+
+
+
+    <div class="container">
+
+    <div class="row">
+
+    <div class='list-group gallery'>
+
+
+            <?php
+
+            require('db_config.php');
+
+            $id = "";
+            $sql = "SELECT * FROM tblnewsfeed WHERE nfStatus = '1'";
+
+            $images = $mysqli->query($sql);
+
+
+            while($image = $images->fetch_assoc()){
+                $id = $image['nfID']
+
+            ?>
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+
+                        <a href="newsfeedDetails.php?id=<?php echo $id ?>">
+                            <img class="img-responsive" id="imgIDNF" alt=""  src="newsfeed/<?php echo $image['nfImage'] ?>" />
+                        </a>
+                        <div class='text-center' style="margin-bottom: 10px; margin-top: 5px">
+                            <small class='text-muted'><?php echo $image['nfName'] ?></small>
+                        </div> 
+
+                    <input type="hidden" name="id" value="<?php echo $image['nfID'] ?>">
+
+                    </form>
+
+                </div> <!-- col-6 / end -->
+
+            <?php } ?>
+
+
+         </div> <!-- list-group / end -->
+
+        </div> <!-- row / end -->
+
+    </div> <!-- container / end -->
+
+
+
+    <hr/>
+
+
+    
+      <!-- Begin #services-section  Universtiy Ranking-->
+    <section id="services" class="services-section section-global-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="services-header">
+                    <h3 class="services-header-title">Universtiy Ranking</h3>
+                </div>
+               <?php
+
+                    //require ('db_config.php');
+
+                    $result = $mysqli->query("SELECT deptImage, deptName,rankPoints 
+                        FROM tblrank
+                        INNER JOIN tbldept
+                        on tblrank.deptID = tbldept.deptID
+                        ORDER BY rankPoints DESC");
+                    echo '<table id="myTable" border="1" width="100%" >
+                    <tr class="header">
+                    <th>Logo</hd>
+                    <th style="width:80%">Department Name</th>
+                    <th>Score</th>
+                    </tr>';
+                    while($row = $result->fetch_assoc()) { 
+                        echo "<tr>";
+                        echo "<td><img src='logo/".$row['deptImage']."' style='width:100%'></td>";
+                        echo "<td>" . $row['deptName'] . "</td>";
+                        echo "<td>".$row['rankPoints']."</td>";
+                        /* echo "<td><input type='button' value='update' data-toggle='modal' data-target='#myModal'></td>";*/
+                        echo "</tr>"; 
+                    }
+                    echo '</table>';
+
+               ?>
+            </div>
+        </div>      
+    </section>
+
+    <!-- Footer -->
+    <footer> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3><i class="fa fa-map-marker"></i> Contact:</h3>
+                    <p class="footer-contact">
+                      <!-- Via Ludovisi 39-45, Rome, 54267, Italy<br>
+                        Phone: 1.800.245.356 Fax: 1.800.245.357<br>
+                        Email: hello@LawOffice.org<br>-->
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3><i class="fa fa-external-link"></i> Links</h3>
+                    <p> <a href="#"> About ( Who we are )</a></p>
+                    <p> <a href="#"> Services ( What we do )</a></p>
+                    <p> <a href="#"> Contact ( Feel free to contact )</a></p>
+                    <p> <a href="#"> Blog ( Write to us )</a></p>
+                    <p> <a href="#"> Team ( Meet the Team )</a></p> 
+                </div>
+              <div class="col-md-4">
+                <h3><i class="fa fa-heart"></i> Socialize</h3>
+                <div id="social-icons">
+                    <a href="#" class="btn-group google-plus">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                      <a href="#" class="btn-group linkedin">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                      <a href="#" class="btn-group twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                      <a href="#" class="btn-group facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </div>
+              </div>    
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-content">
+        <div class="modal-dialog">
+            
+        </div>
+    </div>
+    
+    <div class="copyright text center">
+        <p>&copy; Copyright 2014, <a href="#">Your Website Link</a>. Theme by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a></p>
+    </div>
+
+    
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+
+    
+
+    <!--<script>
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+</script>-->
+
+
+  </body>
+</html>
